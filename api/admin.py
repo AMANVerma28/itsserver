@@ -3,6 +3,7 @@ from .models import *
 
 # Register your models here.
 
+#Open Street Maps Geo Admin is used.
 admin.site.register(Household,admin.OSMGeoAdmin)
 admin.site.register(Member,admin.OSMGeoAdmin)
 admin.site.register(Farm,admin.OSMGeoAdmin)

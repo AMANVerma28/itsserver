@@ -22,19 +22,11 @@ from api import views
 
 urlpatterns = [
     url(r'^household/', views.householddetail),
-#    url(r'^householdaudio/', views.hadetail),
-#    url(r'^householdphoto/', views.hpdetail),
-#    url(r'^householdvideo/', views.hvdetail),
     url(r'^farm/', views.farmdetail),
-#    url(r'^farmphoto/', views.fpdetail),
-#    url(r'^farmvideo/', views.fvdetail),
     url(r'^crop/', views.cropdetail),
     url(r'^well/', views.welldetail),
     url(r'^yield/', views.yielddetail),
-#    url(r'^wellphoto/', views.wpdetail),
     url(r'^member/', views.memberdetail),
     url(r'^season/', views.seasondetail),
     url(r'^storage/', views.storagedetail),
-#    url(r'^storagephoto/', views.spdetail),
 ]
-#urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

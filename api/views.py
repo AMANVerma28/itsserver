@@ -13,6 +13,7 @@ from .serializers import *
 
 # Create your views here.
 
+#View method for model Household
 @detail_route(renderer_classes=(renderers.StaticHTMLRenderer,))
 @csrf_exempt
 def householddetail(request):
@@ -27,6 +28,7 @@ def householddetail(request):
     else:
         return JsonResponse(serializer.errors, status=400)
 
+#View method for model Farm
 @detail_route(renderer_classes=(renderers.StaticHTMLRenderer,))
 @csrf_exempt
 def farmdetail(request):
@@ -41,6 +43,7 @@ def farmdetail(request):
     else:
         return JsonResponse(serializer.errors, status=400)
 
+#View method for model Season
 @detail_route(renderer_classes=(renderers.StaticHTMLRenderer,))
 @csrf_exempt
 def seasondetail(request):
@@ -55,6 +58,7 @@ def seasondetail(request):
     else:
         return JsonResponse(serializer.errors, status=400)
 
+#View method for model Crop
 @detail_route(renderer_classes=(renderers.StaticHTMLRenderer,))
 @csrf_exempt
 def cropdetail(request):
@@ -69,6 +73,7 @@ def cropdetail(request):
     else:
         return JsonResponse(serializer.errors, status=400)
 
+#View method for model Well
 @detail_route(renderer_classes=(renderers.StaticHTMLRenderer,))
 @csrf_exempt
 def welldetail(request):
@@ -83,6 +88,7 @@ def welldetail(request):
     else:
         return JsonResponse(serializer.errors, status=400)
 
+#View method for model Yield
 @detail_route(renderer_classes=(renderers.StaticHTMLRenderer,))
 @csrf_exempt
 def yielddetail(request):
@@ -97,6 +103,7 @@ def yielddetail(request):
     else:
         return JsonResponse(serializer.errors, status=400)
 
+#View method for model Member
 @detail_route(renderer_classes=(renderers.StaticHTMLRenderer,))
 @csrf_exempt
 def memberdetail(request):
@@ -111,6 +118,7 @@ def memberdetail(request):
     else:
         return JsonResponse(serializer.errors, status=400)
 
+#View method for model Storage
 @detail_route(renderer_classes=(renderers.StaticHTMLRenderer,))
 @csrf_exempt
 def storagedetail(request):
@@ -124,103 +132,3 @@ def storagedetail(request):
         return t
     else:
         return JsonResponse(serializer.errors, status=400)
-
-"""
-@detail_route(renderer_classes=(renderers.StaticHTMLRenderer,))
-@csrf_exempt
-def hvdetail(request):
-#    List all crops detail.
-    if request.method == 'GET':
-        #data = JSONParser().parse(request)
-        data = Household_Video.objects.all()   
-        serializer = HVSerializer(data,many=True)
-        t = JsonResponse(serializer.data, status=201,safe=False)
-        t['Access-Control-Allow-Origin']='*'
-        return t
-    else:
-        return JsonResponse(serializer.errors, status=400)
-
-@detail_route(renderer_classes=(renderers.StaticHTMLRenderer,))
-@csrf_exempt
-def hadetail(request):
-#    List all crops detail.
-    if request.method == 'GET':
-        #data = JSONParser().parse(request)
-        data = Household_Audio.objects.all()   
-        serializer = HASerializer(data,many=True)
-        t = JsonResponse(serializer.data, status=201,safe=False)
-        t['Access-Control-Allow-Origin']='*'
-        return t
-    else:
-        return JsonResponse(serializer.errors, status=400)
-
-@detail_route(renderer_classes=(renderers.StaticHTMLRenderer,))
-@csrf_exempt
-def hpdetail(request):
-#    List all crops detail.
-    if request.method == 'GET':
-        #data = JSONParser().parse(request)
-        data = Household_Photo.objects.all()   
-        serializer = HPSerializer(data,many=True)
-        t = JsonResponse(serializer.data, status=201,safe=False)
-        t['Access-Control-Allow-Origin']='*'
-        return t
-    else:
-        return JsonResponse(serializer.errors, status=400)
-
-@detail_route(renderer_classes=(renderers.StaticHTMLRenderer,))
-@csrf_exempt
-def fpdetail(request):
-#    List all crops detail.
-    if request.method == 'GET':
-        #data = JSONParser().parse(request)
-        data = Farm_Photo.objects.all()   
-        serializer = FPSerializer(data,many=True)
-        t = JsonResponse(serializer.data, status=201,safe=False)
-        t['Access-Control-Allow-Origin']='*'
-        return t
-    else:
-        return JsonResponse(serializer.errors, status=400)
-
-@detail_route(renderer_classes=(renderers.StaticHTMLRenderer,))
-@csrf_exempt
-def fvdetail(request):
-#    List all crops detail.
-    if request.method == 'GET':
-        #data = JSONParser().parse(request)
-        data = Farm_Video.objects.all()   
-        serializer = FVSerializer(data,many=True)
-        t = JsonResponse(serializer.data, status=201,safe=False)
-        t['Access-Control-Allow-Origin']='*'
-        return t
-    else:
-        return JsonResponse(serializer.errors, status=400)
-
-@detail_route(renderer_classes=(renderers.StaticHTMLRenderer,))
-@csrf_exempt
-def wpdetail(request):
-#    List all crops detail.
-    if request.method == 'GET':
-        #data = JSONParser().parse(request)
-        data = Well_Photo.objects.all()   
-        serializer = WPSerializer(data,many=True)
-        t = JsonResponse(serializer.data, status=201,safe=False)
-        t['Access-Control-Allow-Origin']='*'
-        return t
-    else:
-        return JsonResponse(serializer.errors, status=400)
-
-@detail_route(renderer_classes=(renderers.StaticHTMLRenderer,))
-@csrf_exempt
-def spdetail(request):
-#    List all crops detail.
-    if request.method == 'GET':
-        #data = JSONParser().parse(request)
-        data = Storage_Photo.objects.all()   
-        serializer = SPSerializer(data,many=True)
-        t = JsonResponse(serializer.data, status=201,safe=False)
-        t['Access-Control-Allow-Origin']='*'
-        return t
-    else:
-        return JsonResponse(serializer.errors, status=400)
-"""
