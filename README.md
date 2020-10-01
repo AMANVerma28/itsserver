@@ -1,3 +1,3 @@
 # Annapurna Server
-The website is hosted on heroku.
+The website is hosted by heroku.
 https://itsproject-server.herokuapp.com/
